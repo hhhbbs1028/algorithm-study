@@ -24,5 +24,3 @@ def insertion_sort():
     print(arr) 
 
 insertion_sort()
-
-# commit test
