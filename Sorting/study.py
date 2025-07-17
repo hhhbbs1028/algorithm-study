@@ -21,6 +21,8 @@ def insertion_sort():
                 print(arr)
             else:
                 break
-    print(arr)
+    print(arr) 
 
 insertion_sort()
+
+# commit test
