@@ -34,6 +34,11 @@ graph = [
     [1,7]
 ]
 
+graph=[
+    [1,2],
+    [1,3]
+]
+
 visited = [False]*9
 
 # dfs(graph, 1, visited)
