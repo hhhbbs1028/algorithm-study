@@ -1,15 +1,9 @@
 t = int(input())
-tc = [list(map(int, input().split())) for _ in range(t)]
-
-# for _ in range(t):
-#     h,w,n = map(int, input().split())
-#     print(n//h, n%h)
-# print(tc)
-
-for c in tc:
-    h,w,n = c[0],c[1],c[2]
+for _ in range(t):
+    h,w,n = map(int, input().split())
     if n%h==0:
-        cmd = h
+        floor = h
     else:
-        cmd = n//h 
-    print((cmd)*100+n%h+1)
+        floor = n%h
+    ho = (n-1)//h+1
+    print(floor*100+ho)
