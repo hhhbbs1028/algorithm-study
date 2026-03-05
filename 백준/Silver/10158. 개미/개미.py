@@ -1,20 +1,11 @@
-import math
 w, h = map(int, input().split())
-p, q = map(int, input().split())
+p, q = map(int, input().split()) # 초기 위치
 t = int(input())
 
-tx = t%(2*w)
-ty = t%(2*h)
-
-x, y = 1, 1
-for i in range(tx):
-    p += x
-    if p==w or p==0:
-        x*=-1
-
-for i in range(ty):
-    q += y
-    if q==h or q==0:
-        y*=-1
-
-print(p,q)
+x = (p+t)%(2*w)
+y = (q+t)%(2*h)
+if x>w:
+    x = -x+2*w
+if y>h:
+    y = -y+2*h
+print(x, y)
