@@ -1,9 +1,9 @@
+import itertools
+
 n, m = map(int, input().split())
 nums = list(map(int, input().split()))
-sums = [0]
-for k in range(n):
-    sums.append(sums[k]+nums[k])
+acc = list(itertools.accumulate(nums, initial=0))
 
-for _ in range(m):    
+for _ in range(m):
     i, j = map(int, input().split())
-    print(sums[j]-sums[i-1])
+    print(acc[j]-acc[i-1])
