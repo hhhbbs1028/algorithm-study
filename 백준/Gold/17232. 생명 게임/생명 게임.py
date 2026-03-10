@@ -2,6 +2,7 @@ import sys
 input = sys.stdin.readline
 n, m, t = map(int, input().split())
 k, a, b = map(int, input().split())
+k = min(k, max(n,m))
 
 life = []
 for _ in range(n):
